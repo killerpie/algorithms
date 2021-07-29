@@ -16,14 +16,18 @@ quick sort is a divide and conquer problem, it means it will split the problem i
 
 # Recursive quick sort
 
-def partition(low,high):
-  i = 0, j = -1
-  pivot = list[low] 
+def partition(list,start,end):
+  pivot = list[start]
+  i = start + 1
+  j = end
   while i < j: 
-    do i += 1 while list[i] <= pivot:
-    do j -= 1 while list[j] > pivot: 
+    while list[i] <= pivot:
+        i += 1
+    while list[j] > pivot:
+        j -= 1
     list[i],list[j] = list[j],list[i]
-   return j
+    return j
+
 
 def quickSort(low,high): 
   if low < high:
