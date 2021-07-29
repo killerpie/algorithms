@@ -9,5 +9,29 @@ example 3: [4,6,7,10,16,13,14,12] surely [10] is sorted because all elements are
 quick sort is a divide and conquer problem, it means it will split the problem into subproblems and sort those subproblems. 
 '''
 
-#find the position for the pivot element. start with the first in the list. list[i] - greater than pivot; list[j] - smaller than pivot. when j > i, j is where the pivot's position. 
+# find the position for the pivot element. start with the first in the list. 
+# while i < j, find list[i] greater than pivot; find list[j] smaller than pivot. then swap. when i > j, j is where the pivot's position, swap elements of j and pivot. pivot is sorted 
+# proceed to next pivot. 
 
+
+# Recursive quick sort
+
+def partition(low,high):
+  i = 0, j = -1
+  pivot = list[low] 
+  while i < j: 
+    do i += 1 while list[i] <= pivot:
+    do j -= 1 while list[j] > pivot: 
+    list[i],list[j] = list[j],list[i]
+   return j
+
+def quickSort(low,high): 
+  if low < high:
+    j = partition(low,high)
+    quickSort(low,j)
+    quickSort(j+1,high) 
+    
+    
+    
+    
+    
