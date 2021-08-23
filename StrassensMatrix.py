@@ -1,2 +1,0 @@
-''' Strassens Matrix Multiplication ''' 
-
